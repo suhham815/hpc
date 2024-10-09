@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "immintrin.h": "c",
+        "defs.h": "c",
+        "stdlib.h": "c"
+    }
+}
