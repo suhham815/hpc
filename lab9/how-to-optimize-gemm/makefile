@@ -3,13 +3,13 @@ NEW  := gpu_gemm
 
 CC         := gcc
 NVCC       := nvcc
-#运行gpu版本要改成NVCC
-LINKER     := $(NVCC) 
+#运行gpu版本要把LINKER成NVCC
+LINKER     := $(CC) 
 
 CFLAGS     := -Wall -Werror -Wno-unused-result -Wno-unused-value -Wno-unused-variable -g -fopenmp -lopenblas -lpthread -mavx2
-#LDFLAGS    := -lm -fopenmp -lopenblas -lpthread -mavx2
+LDFLAGS    := -lm -fopenmp -lopenblas -lpthread -mavx2
 #运行gpu版本时要用这个才能运行
-LDFLAGS    := -lm -lcublas -lcuda
+#LDFLAGS    := -lm -lcublas -lcuda
 
 DATA_DIR = _data
 BUILD_DIR = _build
